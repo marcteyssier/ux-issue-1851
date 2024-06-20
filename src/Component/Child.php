@@ -11,13 +11,14 @@ final class Child
 {
     use DefaultActionTrait;
 
-    #[LiveProp(writable: true)]
     /**
-     * @var [string, string]
+     * @var list<array<string, string>>
      */
-    public array $list = [];
+    #[LiveProp(writable: true)]
+    public array $list;
 
-    public function mount() {
-        $this->list[] = ['comment' => 'test'];
+    public function mount(): void
+    {
+        $this->list = [0 => ['comment' => 'Test'.rand(1,999)]];
     }
 }
