@@ -1,0 +1,16 @@
+version: '3.7'
+services:
+    front:
+        image: thecodingmachine/php:8.2-v4-apache-node20
+        container_name: test
+        ports:
+        - 80:80
+        volumes:
+        - ./:/var/www/html:rw
+        environment:
+            APACHE_DOCUMENT_ROOT: ./public
+            PHP_EXTENSION_XSL: 1
+            PHP_EXTENSION_INTL: 1
+            PHP_EXTENSION_GD: 1
+            PHP_INI_MEMORY_LIMIT: 1g
+            PHP_INI_DATE__TIMEZONE: "Europe/Paris"
