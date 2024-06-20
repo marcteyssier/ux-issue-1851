@@ -3,5 +3,5 @@ Run docker, is started by default on port 80.
 
 Then run commands :
 - composer install
-- npm update
+- npm install
 - npm run build
