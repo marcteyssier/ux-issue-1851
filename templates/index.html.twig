@@ -3,5 +3,19 @@
 {% block title %}Hello HomeController!{% endblock %}
 
 {% block body %}
-    <twig:Index/>
+
+    <div style="max-width: 800px; margin: 0 auto;">
+
+        <div style="padding: 2rem; margin: 2rem; background-color: #f0f0f0;">
+            <h1>Index > Child</h1>
+            <twig:Index />
+        </div>
+
+        <div style="padding: 2rem; margin: 2rem; background-color: #f0f0f0;">
+            <h1>Child</h1>
+            <twig:Child />
+        </div>
+
+    </div>
+
 {% endblock %}

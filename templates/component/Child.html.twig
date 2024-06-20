@@ -1,4 +1,8 @@
 <div{{ attributes }}>
-    <input data-model="list[0].comment"/>
-    {{ list[0].comment }}
+
+    <form data-model="*">
+        <input name="list[0][comment]"  value="{{ list[0].comment }}" />
+        <pre><code>{{ list[0].comment }}</code></pre>
+    </form>
+
 </div>
